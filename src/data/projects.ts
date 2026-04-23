@@ -150,7 +150,7 @@ export const projects: Project[] = [
       'Análise do perfil e objetivo de uso',
       'Escolha do valor e prazo da carta',
       'Pagamento de parcelas planejadas',
-      'Contemplação por sorteio ou lance'
+      'Nove formas diferentes de contemplação'
     ],
     images: [
       { id: '5-1', src: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Aeronave executiva', aspectRatio: 'landscape' }
