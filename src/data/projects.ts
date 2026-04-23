@@ -60,7 +60,7 @@ export const projects: Project[] = [
     howItWorks: [
       'Defina o valor do carro dos seus sonhos',
       'Contrate a carta com parcelas mensais',
-      'Aguarde sorteio ou ofereça lance',
+      'Nove formas diferentes de contemplação',
       'Compre à vista, com poder de negociação'
     ],
     images: [
