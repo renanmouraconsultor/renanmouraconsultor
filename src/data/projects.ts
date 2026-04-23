@@ -321,7 +321,7 @@ export const projects: Project[] = [
       'Planejamento de longo prazo'
     ],
     howItWorks: [
-      'Análise do seu perfil de investidor',
+      'Garantido pela lei 11.795/2008',
       'Escolha das cartas e prazos ideais',
       'Pagamento programado das parcelas',
       'Uso estratégico da contemplação'
