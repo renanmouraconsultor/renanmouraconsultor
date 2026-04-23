@@ -1,4 +1,5 @@
 import type { PhotographerInfo } from '@/types';
+import portraitImage from '@/assets/renan-moura.jpeg';
 
 /**
  * Consultant + brand info.
@@ -42,7 +43,5 @@ Transparência total nas condições, acompanhamento contínuo até a contempla�
     linkedin: '',
     facebook: ''
   },
-  // Placeholder — substitua pela sua foto profissional
-  portraitImage:
-    'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080'
+  portraitImage
 };
