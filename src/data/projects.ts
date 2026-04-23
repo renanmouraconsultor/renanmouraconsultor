@@ -322,7 +322,7 @@ export const projects: Project[] = [
     ],
     howItWorks: [
       'Garantido pela lei 11.795/2008',
-      'Escolha das cartas e prazos ideais',
+      'Valorização da carta de acordo com o INCC',
       'Pagamento programado das parcelas',
       'Uso estratégico da contemplação'
     ],
