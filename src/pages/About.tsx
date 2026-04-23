@@ -140,7 +140,7 @@ export default function About() {
                     >
                       {parts.map((part, i) =>
                         part === 'Ademicon' ? (
-                          <span key={i} className="text-red-600 dark:text-red-500 font-medium">
+                          <span key={i} className="text-destructive font-medium">
                             {part}
                           </span>
                         ) : (
