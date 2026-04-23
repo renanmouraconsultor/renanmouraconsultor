@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu } from 'lucide-react';
+import { Menu, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollPosition } from '@/hooks/useScrollPosition';
@@ -10,10 +10,10 @@ import { photographerInfo } from '@/data/photographer';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Portfolio', path: '/portfolio' },
-  { name: 'About', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Início', path: '/' },
+  { name: 'Modalidades', path: '/portfolio' },
+  { name: 'Sobre', path: '/about' },
+  { name: 'Contato', path: '/contact' },
 ];
 
 /**
@@ -47,7 +47,7 @@ export function Header() {
           <Link
             to="/"
             className={cn(
-              'text-lg font-light tracking-widest transition-all duration-300',
+              'font-serif text-xl tracking-wide transition-all duration-300',
               isTransparent
                 ? 'text-white hover:text-white/80'
                 : 'text-foreground hover:text-foreground/80'
@@ -58,7 +58,7 @@ export function Header() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              {photographerInfo.name.toUpperCase()}
+              {photographerInfo.brandName}
             </motion.span>
           </Link>
 
@@ -73,20 +73,40 @@ export function Header() {
                 >
                   <Link
                     to={link.path}
-                    className="relative text-lg leading-7 font-light tracking-wide text-white transition-colors duration-300 hover:text-white/80"
+                    className={cn(
+                      'relative text-sm font-medium tracking-wide transition-colors duration-300',
+                      isTransparent
+                        ? 'text-white hover:text-white/80'
+                        : 'text-foreground hover:text-accent'
+                    )}
                   >
                     {link.name}
                     {/* Active underline */}
                     {location.pathname === link.path && (
                       <motion.div
                         layoutId="activeNav"
-                        className="absolute -bottom-1 left-0 right-0 h-px bg-white"
+                        className={cn(
+                          'absolute -bottom-1 left-0 right-0 h-px',
+                          isTransparent ? 'bg-white' : 'bg-accent'
+                        )}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
                   </Link>
                 </motion.div>
               ))}
+            <motion.a
+              href={`https://wa.me/${photographerInfo.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-accent-foreground shadow-sm hover:opacity-90 transition-opacity"
+            >
+              <MessageCircle className="size-4" />
+              Fale comigo
+            </motion.a>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -120,11 +140,20 @@ export function Header() {
                       key={link.path}
                       to={link.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="text-lg leading-7 font-light tracking-wide text-foreground hover:text-foreground/80"
+                      className="text-lg leading-7 font-light tracking-wide text-foreground hover:text-accent"
                     >
                       {link.name}
                     </Link>
                   ))}
+                  <a
+                    href={`https://wa.me/${photographerInfo.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-sm font-medium text-accent-foreground"
+                  >
+                    <MessageCircle className="size-4" />
+                    Falar no WhatsApp
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
