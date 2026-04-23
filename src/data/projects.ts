@@ -1,4 +1,5 @@
 import type { Project } from '@/types';
+import aposentadoriaImg from '@/assets/aposentadoria.jpg';
 
 /**
  * Modalidades de carta de crédito oferecidas.
@@ -338,8 +339,7 @@ export const projects: Project[] = [
     icon: 'Landmark',
     shortDescription: 'Planeje uma aposentadoria tranquila com cartas de crédito como reserva patrimonial.',
     creditRange: 'R$ 50 mil – R$ 2 milhões',
-    coverImage:
-      'https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    coverImage: aposentadoriaImg,
     description:
       'Construa uma aposentadoria sólida usando cartas de crédito como ferramenta de planejamento de longo prazo. Forme patrimônio, gere renda passiva com imóveis e tenha previsibilidade financeira para o futuro — sem depender exclusivamente da previdência.',
     benefits: [
@@ -355,7 +355,7 @@ export const projects: Project[] = [
       'Uso da contemplação para gerar patrimônio ou renda'
     ],
     images: [
-      { id: '12-1', src: 'https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Casal aproveitando a aposentadoria', aspectRatio: 'landscape' }
+      { id: '12-1', src: aposentadoriaImg, alt: 'Casal de idosos felizes e bem vestidos aproveitando a aposentadoria', aspectRatio: 'landscape' }
     ]
   }
 ];
