@@ -163,7 +163,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <MessageCircle className="size-5 mr-2" />
-                  Fale com um consultor
+                Fale comigo
                 </a>
               </Button>
               <Button
