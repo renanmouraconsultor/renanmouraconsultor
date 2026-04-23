@@ -313,7 +313,7 @@ export const projects: Project[] = [
     coverImage:
       'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
     description:
-      'Use cartas de crédito como estratégia patrimonial: aquisição de imóveis para renda, formação de reserva, aposentadoria planejada e diversificação. Eu monto a estratégia ideal para o seu perfil.',
+      'Invista revendendo cartas de crédito para a própria administradora por 30% a 40% do valor da carta.',
     benefits: [
       'Estratégia patrimonial sem juros',
       'Diversificação inteligente',
