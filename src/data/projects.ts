@@ -328,6 +328,35 @@ export const projects: Project[] = [
     images: [
       { id: '11-1', src: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Gráficos financeiros', aspectRatio: 'landscape' }
     ]
+  },
+  {
+    id: '12',
+    title: 'Aposentadoria',
+    category: 'investimento',
+    year: 'Aposentadoria',
+    slug: 'aposentadoria',
+    icon: 'Landmark',
+    shortDescription: 'Planeje uma aposentadoria tranquila com cartas de crédito como reserva patrimonial.',
+    creditRange: 'R$ 50 mil – R$ 2 milhões',
+    coverImage:
+      'https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Construa uma aposentadoria sólida usando cartas de crédito como ferramenta de planejamento de longo prazo. Forme patrimônio, gere renda passiva com imóveis e tenha previsibilidade financeira para o futuro — sem depender exclusivamente da previdência.',
+    benefits: [
+      'Planejamento previdenciário sem juros',
+      'Formação de patrimônio com previsibilidade',
+      'Possibilidade de renda passiva via imóveis',
+      'Complemento estratégico ao INSS e à previdência privada'
+    ],
+    howItWorks: [
+      'Definimos juntos o objetivo da sua aposentadoria',
+      'Escolha das cartas e prazos alinhados ao seu horizonte',
+      'Pagamento programado e disciplinado',
+      'Uso da contemplação para gerar patrimônio ou renda'
+    ],
+    images: [
+      { id: '12-1', src: 'https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Casal aproveitando a aposentadoria', aspectRatio: 'landscape' }
+    ]
   }
 ];
 

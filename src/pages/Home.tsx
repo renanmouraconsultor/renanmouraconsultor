@@ -23,6 +23,7 @@ import {
   Heart,
   HeartPulse,
   TrendingUp,
+  Landmark,
   type LucideIcon,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,6 +39,7 @@ const iconMap: Record<string, LucideIcon> = {
   Heart,
   HeartPulse,
   TrendingUp,
+  Landmark,
 };
 
 const beneficios = [
