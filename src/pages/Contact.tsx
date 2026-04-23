@@ -167,7 +167,7 @@ export default function Contact() {
                   </div>
                   <div className="space-y-1">
                     <p className="text-sm font-light tracking-wide text-muted-foreground">Horário</p>
-                    <p className="text-base md:text-lg font-light">Seg a Sex • 09h – 19h</p>
+                    <p className="text-base md:text-lg font-light">Seg a Sex • 07h - 22h</p>
                   </div>
                 </div>
               </div>
