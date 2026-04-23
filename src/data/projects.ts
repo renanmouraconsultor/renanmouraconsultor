@@ -1,4 +1,5 @@
 import type { Project } from '@/types';
+import aposentadoriaImg from '@/assets/aposentadoria.jpg';
 
 /**
  * Modalidades de carta de crédito oferecidas.
