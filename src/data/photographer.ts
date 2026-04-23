@@ -33,14 +33,14 @@ Transparência total nas condições, acompanhamento contínuo até a contempla�
   ],
   education: 'Especialização em Planejamento Financeiro e Crédito',
   location: 'Atendimento em todo o Brasil',
-  email: 'contato@suaconsultoria.com.br',
-  phone: '+55 (11) 99999-0000',
-  whatsapp: '5511999990000',
+  email: 'renanmouraconsultor@gmail.com',
+  phone: '+55 (67) 99185-1068',
+  whatsapp: '5567991851068',
   availability: 'Disponível para novas consultas esta semana',
   socialLinks: {
-    instagram: 'https://instagram.com/suaconsultoria',
-    linkedin: 'https://linkedin.com/in/suaconsultoria',
-    facebook: 'https://facebook.com/suaconsultoria'
+    instagram: 'https://www.instagram.com/renanmouraconsultor',
+    linkedin: '',
+    facebook: ''
   },
   // Placeholder — substitua pela sua foto profissional
   portraitImage:
