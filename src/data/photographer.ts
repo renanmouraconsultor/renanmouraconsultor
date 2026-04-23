@@ -6,8 +6,8 @@ import type { PhotographerInfo } from '@/types';
  * Replace placeholder name, phone, email, social links with the user's real data.
  */
 export const photographerInfo: PhotographerInfo = {
-  brandName: 'Crédito & Realização',
-  name: 'Consultoria Financeira',
+  brandName: 'Renan Moura',
+  name: 'Renan Moura',
   tagline: 'Cartas de crédito para realizar seus sonhos',
   heroIntroduction:
     'Planejamento inteligente, parcelas acessíveis e zero juros. Eu ajudo você a transformar grandes objetivos em conquistas concretas.',
