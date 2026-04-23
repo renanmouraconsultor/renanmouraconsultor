@@ -202,9 +202,9 @@ function OfficesSection() {
     <section className="py-16 md:py-24 px-6 lg:px-8 border-t border-border bg-secondary/40">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 space-y-3">
-          <p className="text-xs uppercase tracking-[0.4em] text-accent">Onde estamos</p>
+          <p className="text-xs uppercase tracking-[0.4em] text-accent">Onde estou</p>
           <h2 className="font-serif text-3xl md:text-4xl tracking-tight text-primary">
-            Nossos endereços em Campo Grande
+            Meus endereços em Campo Grande
           </h2>
           <p className="text-muted-foreground font-light max-w-2xl mx-auto">
             Atendimento presencial em dois endereços para sua comodidade. Agende uma visita.
