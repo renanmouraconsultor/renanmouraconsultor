@@ -131,14 +131,25 @@ export default function About() {
 
               {/* Biography */}
               <div className="space-y-4">
-                {photographerInfo.biography.split('\n\n').map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-base md:text-lg font-light leading-relaxed text-muted-foreground"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {photographerInfo.biography.split('\n\n').map((paragraph, index) => {
+                  const parts = paragraph.split(/(Ademicon)/g);
+                  return (
+                    <p
+                      key={index}
+                      className="text-base md:text-lg font-light leading-relaxed text-muted-foreground"
+                    >
+                      {parts.map((part, i) =>
+                        part === 'Ademicon' ? (
+                          <span key={i} className="text-red-600 dark:text-red-500 font-medium">
+                            {part}
+                          </span>
+                        ) : (
+                          part
+                        )
+                      )}
+                    </p>
+                  );
+                })}
               </div>
 
               {/* Contact Info */}
