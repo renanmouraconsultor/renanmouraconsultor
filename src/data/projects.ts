@@ -46,7 +46,7 @@ export const projects: Project[] = [
     slug: 'carro',
     icon: 'Car',
     shortDescription: 'Compre o carro que você quer — zero ou seminovo — sem pagar juros.',
-    creditRange: 'R$ 30 mil – R$ 300 mil',
+    creditRange: 'R$ 30 mil – R$ 1,1 milhão',
     coverImage:
       'https://images.unsplash.com/photo-1503376780353-7e6692767b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
     description:
