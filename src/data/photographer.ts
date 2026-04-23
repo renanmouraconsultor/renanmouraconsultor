@@ -12,7 +12,7 @@ export const photographerInfo: PhotographerInfo = {
   tagline: 'Cartas de crédito para realizar seus sonhos',
   heroIntroduction:
     'Planejamento inteligente, parcelas acessíveis e zero juros. Eu ajudo você a transformar grandes objetivos em conquistas concretas.',
-  biography: `Atuo como consultor financeiro especializado em cartas de crédito (consórcios), oferecendo soluções para quem busca conquistar bens e realizar projetos com planejamento e disciplina financeira — sem pagar juros bancários.
+  biography: `Atuo como consultor financeiro especializado em cartas de crédito (consórcios) da Ademicon, a maior administradora do Brasil, oferecendo soluções para quem busca conquistar bens e realizar projetos com planejamento e disciplina financeira — sem pagar juros bancários.
 
 Trabalho lado a lado com cada cliente para entender o objetivo, o momento de vida e o orçamento disponível, desenhando o plano que melhor encaixa na sua realidade. Minha missão é tornar a contratação simples, transparente e segura, do primeiro contato até a contemplação.`,
   approach: `Acredito que decisões financeiras importantes merecem clareza e tempo. Por isso, todo atendimento começa com uma consulta gratuita: entendo seu objetivo, explico como a carta de crédito funciona e mostro o caminho mais inteligente para você chegar lá.
