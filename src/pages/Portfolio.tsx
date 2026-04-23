@@ -12,32 +12,35 @@ export default function Portfolio() {
   return (
     <>
       <SEOHead 
-        title="Portfolio"
-        description="Browse my complete photography portfolio featuring portraits, landscapes, editorial work, architecture, and documentary projects."
+        title="Modalidades"
+        description="Conheça todas as modalidades de cartas de crédito: casa, carro, moto, barco, avião, construção, reforma, viagem, casamento, cirurgias e investimentos."
       />
       
       <div className="min-h-screen">
         {/* Hero Section */}
-      <section className="relative py-24 md:py-32 px-6 lg:px-8 border-b border-border">
+      <section className="relative py-24 md:py-32 px-6 lg:px-8 border-b border-border bg-secondary/40">
         <div className="max-w-7xl mx-auto text-center space-y-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-4">
-              Portfolio
+            <p className="text-xs uppercase tracking-[0.4em] text-accent mb-4">Cartas de crédito</p>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl tracking-tight mb-4 text-primary">
+              Modalidades
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide max-w-2xl mx-auto">
-              A curated collection of photography spanning diverse subjects and styles
+            <p className="text-base md:text-lg text-muted-foreground font-light tracking-wide max-w-2xl mx-auto">
+              Cada objetivo merece uma estratégia. Escolha a modalidade que combina com o seu sonho e veja como funciona.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Portfolio Grid - Edge to edge */}
-      <section className="py-12 md:py-16 px-2 md:px-4">
-        <PortfolioGrid projects={projects} />
+      {/* Grid de modalidades */}
+      <section className="py-16 md:py-24 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto">
+          <PortfolioGrid projects={projects} />
+        </div>
       </section>
 
         {/* Bottom spacing */}

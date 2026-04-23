@@ -1,371 +1,357 @@
 import type { Project } from '@/types';
 
+/**
+ * Modalidades de carta de crédito oferecidas.
+ * Mantemos o nome "projects" para preservar compatibilidade com componentes
+ * existentes (PortfolioGrid, ProjectCard, Lightbox, ProjectDetail).
+ * Cada item representa uma modalidade — não um projeto fotográfico.
+ */
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Desert Solitude',
-    category: 'landscapes',
-    year: '2024',
-    slug: 'desert-solitude',
-    // Photo by Zain Creations on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1733496637708-9470e9c8cfe2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjB8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'An exploration of the stark beauty and quiet majesty of the American Southwest. This series captures the interplay of light, shadow, and ancient geological formations that define the desert landscape.',
-    client: 'National Geographic',
-    camera: 'Hasselblad X2D 100C',
-    location: 'Arizona & Utah',
+    title: 'Casa Própria',
+    category: 'imovel',
+    year: 'Imóveis',
+    slug: 'casa-propria',
+    icon: 'Home',
+    shortDescription: 'Realize o sonho do imóvel próprio com parcelas que cabem no bolso.',
+    creditRange: 'R$ 100 mil – R$ 1,5 milhão',
+    coverImage:
+      'https://images.unsplash.com/photo-1568605114967-8130f3a36994?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para aquisição de casa, apartamento, terreno ou imóvel comercial. Use para comprar pronto, na planta ou usado, em qualquer lugar do Brasil. Sem entrada obrigatória, sem juros bancários e com poder de compra à vista.',
+    benefits: [
+      'Sem juros — apenas taxa de administração',
+      'Use como entrada ou pagamento integral',
+      'Quitação de financiamento existente',
+      'Lance facultativo para antecipar a contemplação'
+    ],
+    howItWorks: [
+      'Escolha o valor da carta conforme seu objetivo',
+      'Pague parcelas mensais acessíveis',
+      'Seja contemplado por sorteio ou lance',
+      'Use o crédito como dinheiro à vista'
+    ],
     images: [
-      {
-        id: '1-1',
-        // Photo by Joe Dudeck on Unsplash
-        src: 'https://images.unsplash.com/photo-1610142004358-e4e987e4c5af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjF8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Desert canyon at golden hour',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '1-2',
-        // Photo by Giorgio Fouarge on Unsplash
-        src: 'https://images.unsplash.com/photo-1705321217071-b1b6672fa23c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjF8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Sand dunes in morning light',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '1-3',
-        // Photo by Astroby krishna on Unsplash
-        src: 'https://images.unsplash.com/photo-1727319384541-8b96ca1526e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjF8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Rock formations under starry sky',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '1-4',
-        // Photo by Ilker Ozmen on Unsplash
-        src: 'https://images.unsplash.com/photo-1725986951716-75fb278ecaec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjJ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Desert vista at sunset',
-        aspectRatio: 'square'
-      }
+      { id: '1-1', src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Casa moderna com jardim', aspectRatio: 'landscape' },
+      { id: '1-2', src: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1200', alt: 'Sala de estar iluminada', aspectRatio: 'portrait' },
+      { id: '1-3', src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Fachada de apartamento', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '2',
-    title: 'Urban Portraits',
-    category: 'portraits',
-    year: '2024',
-    slug: 'urban-portraits',
-    // Photo by Bradley Andrews on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1761069234906-a7c77124f641?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjJ8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'A portrait series celebrating the diversity and character of city dwellers. Each subject was photographed in their favorite urban location, revealing the intimate connection between people and their environment.',
-    client: 'The New York Times Magazine',
-    camera: 'Canon EOS R5',
-    location: 'New York City',
+    title: 'Carro',
+    category: 'veiculo',
+    year: 'Veículos',
+    slug: 'carro',
+    icon: 'Car',
+    shortDescription: 'Compre o carro que você quer — zero ou seminovo — sem pagar juros.',
+    creditRange: 'R$ 30 mil – R$ 300 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para compra de automóvel novo ou usado, nacional ou importado. Liberdade total para escolher marca, modelo e concessionária. Você ainda pode somar com o seu carro atual como parte de pagamento.',
+    benefits: [
+      'Sem juros e sem entrada',
+      'Use em qualquer concessionária ou particular',
+      'Carro 0 km, seminovo ou usado',
+      'Possibilidade de lance com FGTS em algumas modalidades'
+    ],
+    howItWorks: [
+      'Defina o valor do carro dos seus sonhos',
+      'Contrate a carta com parcelas mensais',
+      'Aguarde sorteio ou ofereça lance',
+      'Compre à vista, com poder de negociação'
+    ],
     images: [
-      {
-        id: '2-1',
-        // Photo by ali mahmoodi on Unsplash
-        src: 'https://images.unsplash.com/photo-1559123988-ebd5228736b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjJ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Portrait of young man in urban setting',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '2-2',
-        // Photo by mouad bouallayel on Unsplash
-        src: 'https://images.unsplash.com/photo-1628173422874-0d18ff5bfb83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjN8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Professional portrait in natural light',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '2-3',
-        // Photo by Ivan Lenin on Unsplash
-        src: 'https://images.unsplash.com/photo-1581329318020-a226e3713ea8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjN8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Candid street portrait',
-        aspectRatio: 'square'
-      },
-      {
-        id: '2-4',
-        // Photo by Elric Pxl on Unsplash
-        src: 'https://images.unsplash.com/photo-1651464416004-60ae4e4846d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjR8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Portrait with city backdrop',
-        aspectRatio: 'portrait'
-      }
+      { id: '2-1', src: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Carro esportivo', aspectRatio: 'landscape' },
+      { id: '2-2', src: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Carro vermelho', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '3',
-    title: 'Architectural Visions',
-    category: 'architecture',
-    year: '2023',
-    slug: 'architectural-visions',
-    // Photo by E Vos on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1758543437543-6d61ca0fd530?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjR8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Modern architecture captured through a minimalist lens. This series focuses on geometric forms, materiality, and the interplay of structure with natural light.',
-    client: 'Architectural Digest',
-    camera: 'Sony A7R V',
-    location: 'International',
+    title: 'Moto',
+    category: 'veiculo',
+    year: 'Veículos',
+    slug: 'moto',
+    icon: 'Bike',
+    shortDescription: 'Sua próxima moto com parcelas leves e sem juros.',
+    creditRange: 'R$ 10 mil – R$ 100 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1558981806-ec527fa84c39?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito ideal para quem quer trocar de moto, comprar a primeira ou investir em um modelo top de linha. Atende motos de trabalho, lazer e alta cilindrada.',
+    benefits: [
+      'Parcelas a partir de poucas centenas de reais',
+      'Sem juros bancários',
+      'Use em concessionária ou particular',
+      'Diversos prazos disponíveis'
+    ],
+    howItWorks: [
+      'Escolha o valor compatível com o modelo desejado',
+      'Pague parcelas acessíveis',
+      'Concorra a sorteios mensais',
+      'Adquira sua moto à vista'
+    ],
     images: [
-      {
-        id: '3-1',
-        // Photo by Zulfugar Karimov on Unsplash
-        src: 'https://images.unsplash.com/photo-1762344682624-176d89eb3bfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjR8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Modern glass building facade',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '3-2',
-        // Photo by Jason Leung on Unsplash
-        src: 'https://images.unsplash.com/photo-1690927324729-bcf7d2b3ecac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjV8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Architectural interior with natural light',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '3-3',
-        // Photo by Declan Sun on Unsplash
-        src: 'https://images.unsplash.com/photo-1752756351017-bbe91e0439a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjV8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Geometric concrete structure',
-        aspectRatio: 'square'
-      },
-      {
-        id: '3-4',
-        // Photo by Alessandro Ricossa on Unsplash
-        src: 'https://images.unsplash.com/photo-1748940644273-47564655923f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjV8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Contemporary building at dusk',
-        aspectRatio: 'landscape'
-      }
+      { id: '3-1', src: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Moto esportiva', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '4',
-    title: 'Fashion Forward',
-    category: 'editorial',
-    year: '2023',
-    slug: 'fashion-forward',
-    // Photo by Yigit ARISOY on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1682232568244-edbb92614c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjZ8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'An editorial series exploring contemporary fashion through bold compositions and dramatic lighting. Shot on location and in studio.',
-    client: 'Vogue',
-    camera: 'Phase One XF IQ4',
-    location: 'New York & Paris',
+    title: 'Barco',
+    category: 'lazer',
+    year: 'Lazer',
+    slug: 'barco',
+    icon: 'Sailboat',
+    shortDescription: 'Lanchas, veleiros e jet skis com planejamento inteligente.',
+    creditRange: 'R$ 50 mil – R$ 2 milhões',
+    coverImage:
+      'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para embarcações de lazer ou esporte: lanchas, veleiros, jet skis e iates. Uma forma planejada e sem juros de conquistar a embarcação ideal para suas horas livres.',
+    benefits: [
+      'Sem juros, apenas taxa de administração',
+      'Liberdade para escolher modelo e estaleiro',
+      'Inclui embarcações novas e usadas',
+      'Lance para antecipar contemplação'
+    ],
+    howItWorks: [
+      'Defina o tipo e valor da embarcação',
+      'Contrate a carta de crédito',
+      'Aguarde a contemplação',
+      'Negocie e adquira à vista'
+    ],
     images: [
-      {
-        id: '4-1',
-        // Photo by Cord Allman on Unsplash
-        src: 'https://images.unsplash.com/photo-1730724620317-2b806898bdda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjZ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Fashion editorial portrait',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '4-2',
-        // Photo by Happy Face Emoji on Unsplash
-        src: 'https://images.unsplash.com/photo-1704137892949-e480ceaebe24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njd8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Model in dramatic lighting',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '4-3',
-        // Photo by Lawrence Krowdeed on Unsplash
-        src: 'https://images.unsplash.com/photo-1631970283992-6b57250a4a29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njd8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Fashion photography in urban setting',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '4-4',
-        // Photo by Ayo Ogunseinde on Unsplash
-        src: 'https://images.unsplash.com/photo-1540513325222-55b3afd3ed5b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njh8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Editorial fashion portrait',
-        aspectRatio: 'portrait'
-      }
+      { id: '4-1', src: 'https://images.unsplash.com/photo-1540541338287-41700207dee6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Lancha no mar', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '5',
-    title: 'Mountain Stories',
-    category: 'documentary',
-    year: '2023',
-    slug: 'mountain-stories',
-    // Photo by Eva Šumah on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1742260765447-239ed006350a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njh8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Documentary series following mountain communities and their relationship with the changing alpine environment. A year-long project documenting life at altitude.',
-    client: 'Personal Project',
-    camera: 'Fujifilm GFX 100 II',
-    location: 'Swiss Alps',
+    title: 'Avião',
+    category: 'lazer',
+    year: 'Lazer',
+    slug: 'aviao',
+    icon: 'Plane',
+    shortDescription: 'Aeronaves para uso particular ou comercial sem comprometer caixa.',
+    creditRange: 'R$ 200 mil – R$ 10 milhões',
+    coverImage:
+      'https://images.unsplash.com/photo-1540962351504-03099e0a754b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Solução exclusiva para aquisição de aeronaves: monomotores, bimotores, helicópteros e jatos executivos. Estruturação financeira inteligente para empresários e pilotos privados.',
+    benefits: [
+      'Cartas de alto valor disponíveis',
+      'Sem juros bancários',
+      'Para aeronaves novas e usadas',
+      'Atendimento consultivo dedicado'
+    ],
+    howItWorks: [
+      'Análise do perfil e objetivo de uso',
+      'Escolha do valor e prazo da carta',
+      'Pagamento de parcelas planejadas',
+      'Contemplação por sorteio ou lance'
+    ],
     images: [
-      {
-        id: '5-1',
-        // Photo by Marek Piwnicki on Unsplash
-        src: 'https://images.unsplash.com/photo-1680287327539-9467451a8b81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njh8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Mountain landscape at dawn',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '5-2',
-        // Photo by Wang John on Unsplash
-        src: 'https://images.unsplash.com/photo-1621765808360-5b2ea25d147a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njl8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Alpine village in winter',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '5-3',
-        // Photo by Peter Robbins on Unsplash
-        src: 'https://images.unsplash.com/photo-1721960778604-6a814f039347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njl8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Mountain peaks in fog',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '5-4',
-        // Photo by FETHI BOUHAOUCHINE on Unsplash
-        src: 'https://images.unsplash.com/photo-1654362248566-6804dbcc5bdc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njl8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Sunrise over mountain range',
-        aspectRatio: 'landscape'
-      }
+      { id: '5-1', src: 'https://images.unsplash.com/photo-1583416750470-965b2707b355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Aeronave executiva', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '6',
-    title: 'Coastal Light',
-    category: 'landscapes',
-    year: '2022',
-    slug: 'coastal-light',
-    // Photo by Max Kukurudziak on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1669908752972-e04c3b65e855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1Njl8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'The ever-changing mood of the coastline captured through different seasons and weather conditions. A meditation on light, water, and time.',
-    location: 'Pacific Northwest',
-    camera: 'Nikon Z9',
+    title: 'Construção',
+    category: 'imovel',
+    year: 'Imóveis',
+    slug: 'construcao',
+    icon: 'HardHat',
+    shortDescription: 'Construa do zero a casa que sempre quis, com crédito planejado.',
+    creditRange: 'R$ 80 mil – R$ 1 milhão',
+    coverImage:
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito específica para construção em terreno próprio. Cobre material, mão de obra e até a compra do terreno. Solução perfeita para quem quer um lar feito sob medida.',
+    benefits: [
+      'Use para terreno + construção',
+      'Liberação por etapas conforme obra',
+      'Sem juros — apenas taxa de administração',
+      'Acompanhamento durante toda a obra'
+    ],
+    howItWorks: [
+      'Defina o valor total do projeto',
+      'Contrate a carta com parcelas mensais',
+      'Após contemplação, libere os recursos',
+      'Construa no seu ritmo'
+    ],
     images: [
-      {
-        id: '6-1',
-        // Photo by Stefanie Jockschat on Unsplash
-        src: 'https://images.unsplash.com/photo-1619508126123-3586ee993858?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzB8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Ocean waves at sunset',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '6-2',
-        // Photo by Vladimir Shubarin on Unsplash
-        src: 'https://images.unsplash.com/photo-1566303060899-999a74200af8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzB8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Rocky coastline in morning mist',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '6-3',
-        // Photo by Panchanok Juntanarach on Unsplash
-        src: 'https://images.unsplash.com/photo-1762686185418-2bffbb8d8fea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzB8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Beach at golden hour',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '6-4',
-        // Photo by Emma Watson on Unsplash
-        src: 'https://images.unsplash.com/photo-1594927058779-aa4c1b5804a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzF8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Coastal cliffs in dramatic light',
-        aspectRatio: 'portrait'
-      }
+      { id: '6-1', src: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Casa em construção', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '7',
-    title: 'Studio Sessions',
-    category: 'portraits',
-    year: '2022',
-    slug: 'studio-sessions',
-    // Photo by Kyle Loftus on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1616267624976-b45d3a7bac73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzF8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Controlled studio portraiture emphasizing form, light, and expression. Classic approach to contemporary subjects.',
-    client: 'Various Editorial',
-    camera: 'Hasselblad H6D-100c',
-    location: 'New York Studio',
+    title: 'Reforma',
+    category: 'imovel',
+    year: 'Imóveis',
+    slug: 'reforma',
+    icon: 'Hammer',
+    shortDescription: 'Renove o seu imóvel sem comprometer o orçamento mensal.',
+    creditRange: 'R$ 30 mil – R$ 300 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para reforma residencial ou comercial: ampliação, modernização, decoração, marcenaria, automação e mais. Transforme seu espaço com planejamento.',
+    benefits: [
+      'Use para qualquer tipo de reforma',
+      'Sem necessidade de avaliação do imóvel',
+      'Sem juros bancários',
+      'Crédito liberado em conta'
+    ],
+    howItWorks: [
+      'Estime o valor total da reforma',
+      'Contrate a carta com parcelas mensais',
+      'Concorra à contemplação',
+      'Realize a reforma à vista'
+    ],
     images: [
-      {
-        id: '7-1',
-        // Photo by Kyle Loftus on Unsplash
-        src: 'https://images.unsplash.com/photo-1616267624976-b45d3a7bac73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzF8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Studio portrait with dramatic lighting',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '7-2',
-        // Photo by Robert Piosik on Unsplash
-        src: 'https://images.unsplash.com/photo-1551536548-4de53e534e3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzJ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Classic portrait in soft light',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '7-3',
-        // Photo by Bench Accounting on Unsplash
-        src: 'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzJ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Portrait with minimalist background',
-        aspectRatio: 'square'
-      },
-      {
-        id: '7-4',
-        // Photo by Vitaly Gariev on Unsplash
-        src: 'https://images.unsplash.com/photo-1758521233019-e53cb9ce77b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzJ8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Contemporary studio portrait',
-        aspectRatio: 'portrait'
-      }
+      { id: '7-1', src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Cozinha reformada', aspectRatio: 'landscape' }
     ]
   },
   {
     id: '8',
-    title: 'City Lights',
-    category: 'editorial',
-    year: '2022',
-    slug: 'city-lights',
-    // Photo by Michael Wu on Unsplash
-    coverImage: 'https://images.unsplash.com/photo-1582210413269-f0bf6d13f58f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzN8&ixlib=rb-4.1.0&q=80&w=1080',
-    description: 'Urban nightscapes and the electric energy of city life after dark. Long exposures and ambient light create a dreamlike quality.',
-    client: 'Adobe Creative Cloud',
-    camera: 'Sony A7S III',
-    location: 'Tokyo & New York',
+    title: 'Viagem',
+    category: 'lazer',
+    year: 'Lazer',
+    slug: 'viagem',
+    icon: 'Plane',
+    shortDescription: 'Realize a viagem dos sonhos com planejamento e sem juros.',
+    creditRange: 'R$ 5 mil – R$ 100 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1488646953014-85cb44e25828?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para viagens nacionais e internacionais. Use para passagens, hospedagem, cruzeiros, lua de mel ou intercâmbio. Liberdade para montar o roteiro como quiser.',
+    benefits: [
+      'Use em qualquer agência ou diretamente',
+      'Sem juros bancários',
+      'Inclui pacotes, cruzeiros e intercâmbio',
+      'Parcelas que cabem no orçamento'
+    ],
+    howItWorks: [
+      'Defina o destino e orçamento ideal',
+      'Contrate a carta de crédito',
+      'Aguarde a contemplação',
+      'Embarque para a viagem dos sonhos'
+    ],
     images: [
-      {
-        id: '8-1',
-        // Photo by Li Zhang on Unsplash
-        src: 'https://images.unsplash.com/photo-1617293134227-0ec282f3ed89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzN8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'City street at night with neon lights',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '8-2',
-        // Photo by Clay LeConey on Unsplash
-        src: 'https://images.unsplash.com/photo-1643124859906-b5f7ef3e210d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzN8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Urban skyline at dusk',
-        aspectRatio: 'landscape'
-      },
-      {
-        id: '8-3',
-        // Photo by Lutz Stallknecht on Unsplash
-        src: 'https://images.unsplash.com/photo-1761870033405-d1474ec5dae9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzR8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Night photography of city architecture',
-        aspectRatio: 'portrait'
-      },
-      {
-        id: '8-4',
-        // Photo by stable pattern on Unsplash
-        src: 'https://images.unsplash.com/photo-1701012292510-83de4283ef1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NzR8&ixlib=rb-4.1.0&q=80&w=1080',
-        alt: 'Downtown at night with light trails',
-        aspectRatio: 'landscape'
-      }
+      { id: '8-1', src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Avião decolando', aspectRatio: 'landscape' }
+    ]
+  },
+  {
+    id: '9',
+    title: 'Casamento',
+    category: 'servicos',
+    year: 'Serviços',
+    slug: 'casamento',
+    icon: 'Heart',
+    shortDescription: 'Festa, lua de mel e enxoval no maior dia da sua vida.',
+    creditRange: 'R$ 20 mil – R$ 200 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1519741497674-611481863552?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para realizar o casamento dos sonhos sem comprometer o início da vida a dois. Cobre festa, decoração, vestido, fotografia, lua de mel e o que mais você precisar.',
+    benefits: [
+      'Use para todos os custos do casamento',
+      'Sem juros — apenas taxa de administração',
+      'Liberdade total de fornecedores',
+      'Comece a planejar com tranquilidade'
+    ],
+    howItWorks: [
+      'Defina o orçamento total do evento',
+      'Contrate a carta com parcelas mensais',
+      'Concorra à contemplação',
+      'Realize a celebração à vista'
+    ],
+    images: [
+      { id: '9-1', src: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Cerimônia de casamento', aspectRatio: 'landscape' }
+    ]
+  },
+  {
+    id: '10',
+    title: 'Cirurgias e Procedimentos',
+    category: 'servicos',
+    year: 'Serviços',
+    slug: 'cirurgias',
+    icon: 'HeartPulse',
+    shortDescription: 'Cuide da sua saúde e bem-estar com planejamento financeiro.',
+    creditRange: 'R$ 10 mil – R$ 200 mil',
+    coverImage:
+      'https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Carta de crédito para procedimentos médicos, estéticos, odontológicos, tratamentos especializados e cirurgias eletivas. Liberdade para escolher o melhor profissional sem urgência financeira.',
+    benefits: [
+      'Cobre cirurgias, estética e tratamentos',
+      'Escolha livre do profissional',
+      'Sem juros bancários',
+      'Use também para reabilitação e pós-operatório'
+    ],
+    howItWorks: [
+      'Estime o valor total do procedimento',
+      'Contrate a carta de crédito',
+      'Aguarde a contemplação',
+      'Realize o procedimento com tranquilidade'
+    ],
+    images: [
+      { id: '10-1', src: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Profissional de saúde', aspectRatio: 'landscape' }
+    ]
+  },
+  {
+    id: '11',
+    title: 'Investimentos',
+    category: 'investimento',
+    year: 'Investimentos',
+    slug: 'investimentos',
+    icon: 'TrendingUp',
+    shortDescription: 'Construa patrimônio com cartas de crédito como ativo financeiro.',
+    creditRange: 'R$ 50 mil – R$ 5 milhões',
+    coverImage:
+      'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600',
+    description:
+      'Use cartas de crédito como estratégia patrimonial: aquisição de imóveis para renda, formação de reserva, aposentadoria planejada e diversificação. Eu monto a estratégia ideal para o seu perfil.',
+    benefits: [
+      'Estratégia patrimonial sem juros',
+      'Diversificação inteligente',
+      'Cartas com valorização ao longo do tempo',
+      'Planejamento de longo prazo'
+    ],
+    howItWorks: [
+      'Análise do seu perfil de investidor',
+      'Escolha das cartas e prazos ideais',
+      'Pagamento programado das parcelas',
+      'Uso estratégico da contemplação'
+    ],
+    images: [
+      { id: '11-1', src: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600', alt: 'Gráficos financeiros', aspectRatio: 'landscape' }
     ]
   }
 ];
 
-// Helper function to get project by slug
+// Helper: busca modalidade por slug
 export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find(project => project.slug === slug);
 };
 
-// Helper function to get projects by category
+// Helper: filtra modalidades por categoria ('all' retorna todas)
 export const getProjectsByCategory = (category: string): Project[] => {
   if (category === 'all') return projects;
   return projects.filter(project => project.category === category);
 };
 
-// Helper function to get featured projects (first 4)
+// Helper: modalidades em destaque na home (primeiras 6)
 export const getFeaturedProjects = (): Project[] => {
-  return projects.slice(0, 4);
+  return projects.slice(0, 6);
 };
 
-// Helper function to get next/previous project
-export const getAdjacentProjects = (currentSlug: string): { prev: Project | null; next: Project | null } => {
+// Helper: navegação entre modalidades
+export const getAdjacentProjects = (
+  currentSlug: string
+): { prev: Project | null; next: Project | null } => {
   const currentIndex = projects.findIndex(p => p.slug === currentSlug);
-  
   return {
     prev: currentIndex > 0 ? projects[currentIndex - 1] : null,
     next: currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null

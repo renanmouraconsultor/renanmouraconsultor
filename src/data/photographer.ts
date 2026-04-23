@@ -1,41 +1,48 @@
 import type { PhotographerInfo } from '@/types';
 
+/**
+ * Consultant + brand info.
+ * Kept under the "photographer" filename to avoid breaking existing imports.
+ * Replace placeholder name, phone, email, social links with the user's real data.
+ */
 export const photographerInfo: PhotographerInfo = {
-  name: 'Sarah Mitchell',
-  tagline: 'Editorial & Commercial Photographer',
-  heroIntroduction: 'Creating visual narratives that capture authentic moments and timeless stories.',
-  biography: `Sarah Mitchell is an award-winning photographer specializing in editorial and commercial work, with recognition including the International Photography Awards Editorial Photographer of the Year 2023 and PDN Photo Annual Winner 2022. With over a decade of experience, her work has been featured in numerous international publications and exhibitions, collaborating with clients such as Vogue, The New York Times, National Geographic, Adobe, Apple, Nike, and Architectural Digest.
+  brandName: 'Crédito & Realização',
+  name: 'Consultoria Financeira',
+  tagline: 'Cartas de crédito para realizar seus sonhos',
+  heroIntroduction:
+    'Planejamento inteligente, parcelas acessíveis e zero juros. Eu ajudo você a transformar grandes objetivos em conquistas concretas.',
+  biography: `Atuo como consultor financeiro especializado em cartas de crédito (consórcios), oferecendo soluções para quem busca conquistar bens e realizar projetos com planejamento e disciplina financeira — sem pagar juros bancários.
 
-Based in New York with an MFA in Photography from the School of Visual Arts, Sarah brings a unique perspective to every project, combining technical excellence with artistic vision. Her approach to photography is deeply rooted in storytelling, believing that every image should convey emotion and meaning beyond its visual appeal.`,
-  approach: `My photography is guided by three principles: authenticity, composition, and light. I believe the best images emerge when subjects feel comfortable and genuine, when composition guides the viewer's eye naturally, and when light reveals the essence of the moment.
+Trabalho lado a lado com cada cliente para entender o objetivo, o momento de vida e o orçamento disponível, desenhando o plano que melhor encaixa na sua realidade. Minha missão é tornar a contratação simples, transparente e segura, do primeiro contato até a contemplação.`,
+  approach: `Acredito que decisões financeiras importantes merecem clareza e tempo. Por isso, todo atendimento começa com uma consulta gratuita: entendo seu objetivo, explico como a carta de crédito funciona e mostro o caminho mais inteligente para você chegar lá.
 
-Whether working on editorial assignments or commercial projects, I strive to create images that transcend their immediate purpose and become lasting visual statements.`,
+Transparência total nas condições, acompanhamento contínuo até a contemplação e suporte na utilização do crédito — esse é o padrão de atendimento que ofereço.`,
   awards: [
-    'International Photography Awards - Editorial Photographer of the Year 2023',
-    'PDN Photo Annual - Winner 2022',
-    'Hasselblad Masters Finalist 2021',
-    'Communication Arts Photography Annual 2020'
+    'Mais de 500 clientes atendidos',
+    'Parceiro de administradoras autorizadas pelo Banco Central',
+    'Especialista em planejamento patrimonial',
+    'Atendimento personalizado em todo o Brasil'
   ],
   clients: [
-    'Vogue',
-    'The New York Times',
-    'National Geographic',
-    'Adobe',
-    'Apple',
-    'Nike',
-    'Patagonia',
-    'Architectural Digest'
+    'Famílias',
+    'Profissionais liberais',
+    'Empreendedores',
+    'Investidores',
+    'Aposentados',
+    'Jovens compradores'
   ],
-  education: 'MFA Photography, School of Visual Arts, New York',
-  location: 'New York, NY',
-  email: 'hello@sarahmitchell.com',
-  phone: '+1 (555) 123-4567',
-  availability: 'Currently booking for Q2 2025',
+  education: 'Especialização em Planejamento Financeiro e Crédito',
+  location: 'Atendimento em todo o Brasil',
+  email: 'contato@suaconsultoria.com.br',
+  phone: '+55 (11) 99999-0000',
+  whatsapp: '5511999990000',
+  availability: 'Disponível para novas consultas esta semana',
   socialLinks: {
-    instagram: 'https://instagram.com/sarahmitchellphoto',
-    linkedin: 'https://linkedin.com/in/sarahmitchell',
-    behance: 'https://behance.net/sarahmitchell'
+    instagram: 'https://instagram.com/suaconsultoria',
+    linkedin: 'https://linkedin.com/in/suaconsultoria',
+    facebook: 'https://facebook.com/suaconsultoria'
   },
-  // Photo by Joshua Sun on Unsplash
-  portraitImage: 'https://images.unsplash.com/photo-1585279968680-6606ee6ed134?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3MDA2OTF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NjI3Njk1NjB8&ixlib=rb-4.1.0&q=80&w=1080'
+  // Placeholder — substitua pela sua foto profissional
+  portraitImage:
+    'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080'
 };

@@ -23,33 +23,40 @@ import {
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 
+import { photographerInfo } from '@/data/photographer';
+import { projects } from '@/data/projects';
+
 // Validation schema with security best practices
 const contactFormSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, { message: 'Name must be at least 2 characters' })
-    .max(100, { message: 'Name must be less than 100 characters' }),
+    .min(2, { message: 'Informe ao menos 2 caracteres' })
+    .max(100, { message: 'Nome muito longo' }),
   email: z
     .string()
     .trim()
-    .email({ message: 'Please enter a valid email address' })
-    .max(255, { message: 'Email must be less than 255 characters' }),
-  projectType: z.enum(['editorial', 'commercial', 'personal'], {
-    required_error: 'Please select a project type',
-  }),
+    .email({ message: 'E-mail inválido' })
+    .max(255, { message: 'E-mail muito longo' }),
+  phone: z
+    .string()
+    .trim()
+    .min(8, { message: 'Telefone inválido' })
+    .max(20, { message: 'Telefone muito longo' }),
+  modalidade: z.string().min(1, { message: 'Selecione uma modalidade' }),
   message: z
     .string()
     .trim()
-    .min(10, { message: 'Message must be at least 10 characters' })
-    .max(1000, { message: 'Message must be less than 1000 characters' }),
+    .min(10, { message: 'Conte um pouco mais (mín. 10 caracteres)' })
+    .max(1000, { message: 'Mensagem muito longa' }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 /**
- * Contact form component with validation and error handling
- * Uses react-hook-form + zod for type-safe validation
+ * Formulário de contato com validação.
+ * Por enquanto, abre o WhatsApp do consultor com a mensagem pré-formatada.
+ * Conecte ao Lovable Cloud (e-mail/Edge Function) quando desejar envio automático.
  */
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -60,45 +67,30 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
-      projectType: undefined,
+      phone: '',
+      modalidade: '',
       message: '',
     },
   });
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    
     try {
-      // Formspree integration - replace YOUR_FORM_ID with your actual form ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          projectType: data.projectType,
-          message: data.message,
-          _subject: `New ${data.projectType} inquiry from ${data.name}`,
-        }),
-      });
+      const text =
+        `Olá! Me chamo ${data.name} e tenho interesse em uma carta de crédito.\n\n` +
+        `• Modalidade: ${data.modalidade}\n` +
+        `• E-mail: ${data.email}\n` +
+        `• Telefone: ${data.phone}\n\n` +
+        `Mensagem: ${data.message}`;
+      const url = `https://wa.me/${photographerInfo.whatsapp}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
 
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
-
-      // Show success state
       setIsSuccess(true);
       form.reset();
-
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
+      setTimeout(() => setIsSuccess(false), 6000);
     } catch (error) {
       form.setError('root', {
-        message: 'Failed to send message. Please try again.',
+        message: 'Não foi possível enviar a mensagem. Tente novamente.',
       });
     } finally {
       setIsSubmitting(false);
@@ -119,11 +111,11 @@ export function ContactForm() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
         >
-          <CheckCircle2 className="size-16 mx-auto text-green-600 dark:text-green-400" />
+          <CheckCircle2 className="size-16 mx-auto text-accent-foreground" />
         </motion.div>
-        <h3 className="text-2xl font-light tracking-wide">Message Sent!</h3>
-        <p className="text-muted-foreground font-light leading-relaxed">
-          Thank you for reaching out. I'll get back to you as soon as possible.
+        <h3 className="font-serif text-2xl tracking-wide text-accent-foreground">Mensagem encaminhada!</h3>
+        <p className="text-accent-foreground/80 font-light leading-relaxed">
+          Abrimos o WhatsApp com sua mensagem pronta. Te respondo o mais rápido possível.
         </p>
       </motion.div>
     );
@@ -139,11 +131,11 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-sm font-light tracking-wide">
-                Name
+                Nome completo
               </FormLabel>
               <FormControl>
                 <Input
-                  placeholder="Your full name"
+                  placeholder="Seu nome"
                   className="font-light"
                   {...field}
                 />
@@ -160,12 +152,12 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-sm font-light tracking-wide">
-                Email
+                E-mail
               </FormLabel>
               <FormControl>
                 <Input
                   type="email"
-                  placeholder="your.email@example.com"
+                  placeholder="seu@email.com"
                   className="font-light"
                   {...field}
                 />
@@ -175,31 +167,45 @@ export function ContactForm() {
           )}
         />
 
-        {/* Project Type Select */}
+        {/* Phone Field */}
         <FormField
           control={form.control}
-          name="projectType"
+          name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-sm font-light tracking-wide">
-                Project Type
-              </FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
+              <FormLabel className="text-sm font-light tracking-wide">Telefone / WhatsApp</FormLabel>
+              <FormControl>
+                <Input
+                  type="tel"
+                  placeholder="(11) 99999-9999"
+                  className="font-light"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage className="text-xs font-light" />
+            </FormItem>
+          )}
+        />
+
+        {/* Modalidade Select */}
+        <FormField
+          control={form.control}
+          name="modalidade"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-sm font-light tracking-wide">Modalidade de interesse</FormLabel>
+              <Select onValueChange={field.onChange} value={field.value}>
                 <FormControl>
                   <SelectTrigger className="font-light">
-                    <SelectValue placeholder="Select project type" />
+                    <SelectValue placeholder="Selecione uma modalidade" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent className="bg-popover z-50">
-                  <SelectItem value="editorial" className="font-light">
-                    Editorial
-                  </SelectItem>
-                  <SelectItem value="commercial" className="font-light">
-                    Commercial
-                  </SelectItem>
-                  <SelectItem value="personal" className="font-light">
-                    Personal
-                  </SelectItem>
+                  {projects.map((m) => (
+                    <SelectItem key={m.id} value={m.title} className="font-light">
+                      {m.title}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage className="text-xs font-light" />
@@ -214,11 +220,11 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-sm font-light tracking-wide">
-                Message
+                Mensagem
               </FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Tell me about your project..."
+                  placeholder="Conte um pouco sobre o seu objetivo..."
                   className="min-h-32 font-light resize-none"
                   {...field}
                 />
@@ -238,16 +244,16 @@ export function ContactForm() {
         {/* Submit Button */}
         <Button
           type="submit"
-          className="w-full py-6 text-base font-light tracking-wide"
+          className="w-full py-6 text-base font-medium tracking-wide bg-accent text-accent-foreground hover:opacity-90 rounded-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 size-5 animate-spin" />
-              Sending...
+              Enviando...
             </>
           ) : (
-            'Send Message'
+            'Enviar mensagem'
           )}
         </Button>
       </form>

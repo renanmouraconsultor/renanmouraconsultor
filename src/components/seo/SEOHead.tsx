@@ -23,8 +23,8 @@ export function SEOHead({
   const location = useLocation();
   
   const fullTitle = title 
-    ? `${title} | ${photographerInfo.name}` 
-    : `${photographerInfo.name} - ${photographerInfo.tagline}`;
+    ? `${title} | ${photographerInfo.brandName}` 
+    : `${photographerInfo.brandName} — ${photographerInfo.tagline}`;
   
   const defaultDescription = photographerInfo.heroIntroduction;
   const fullDescription = description || defaultDescription;
@@ -59,7 +59,7 @@ export function SEOHead({
     updateMetaTag('og:type', type, true);
     updateMetaTag('og:url', fullUrl, true);
     updateMetaTag('og:image', image, true);
-    updateMetaTag('og:site_name', photographerInfo.name, true);
+    updateMetaTag('og:site_name', photographerInfo.brandName, true);
     
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
@@ -68,8 +68,11 @@ export function SEOHead({
     updateMetaTag('twitter:image', image);
 
     // Additional SEO tags
-    updateMetaTag('author', photographerInfo.name);
-    updateMetaTag('keywords', `photography, ${photographerInfo.name}, professional photographer, ${photographerInfo.tagline}`);
+    updateMetaTag('author', photographerInfo.brandName);
+    updateMetaTag(
+      'keywords',
+      'carta de crédito, consórcio, consultor financeiro, casa própria, financiamento sem juros, planejamento financeiro'
+    );
   }, [fullTitle, fullDescription, fullUrl, image, type]);
 
   return null;
