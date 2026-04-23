@@ -7,7 +7,7 @@ import portraitImage from '@/assets/renan-moura.jpeg';
  * Replace placeholder name, phone, email, social links with the user's real data.
  */
 export const photographerInfo: PhotographerInfo = {
-  brandName: 'Renan Moura',
+  brandName: 'Crédito & Realização',
   name: 'Renan Moura',
   tagline: 'Cartas de crédito para realizar seus sonhos',
   heroIntroduction:
