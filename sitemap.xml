@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://renanmouraconsultor.com.br/</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://renanmouraconsultor.com.br/about</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://renanmouraconsultor.com.br/contact</loc>
+    <lastmod>2026-04-24</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url><loc>https://renanmouraconsultor.com.br/project/casa-propria</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/carro</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/moto</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/barco</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/aviao</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/construcao</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/reforma</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/viagem</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/casamento</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/cirurgias</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/investimento</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://renanmouraconsultor.com.br/project/aposentadoria</loc><lastmod>2026-04-24</lastmod><priority>0.8</priority></url>
+</urlset>
